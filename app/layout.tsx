@@ -29,8 +29,8 @@ export default function RootLayout({ children }: IProps) {
             <nav className="container mx-auto px-4 flex items-center justify-between">
               <Link href="/">
                 <div className="flex flex-row justify-center items-start gap-1">
-                  <Image alt="tf-icon" src="/logo.svg" width={30} height={30} />
-                  <h1 className="text-2xl font-bold text-blue-900">{layout.talentFlow}</h1>
+                  <Image data-testid="headerLogo" alt="tf-icon" src="/logo.svg" width={30} height={30} />
+                  <h1 data-testid="headerTitle" className="text-2xl font-bold text-blue-900">{layout.talentFlow}</h1>
                 </div>
               </Link>
             </nav>
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: IProps) {
             {children}
           </main>
           <footer className="bg-gray-200 py-4 text-center">
-            <p className="text-gray-600">{layout.footer}</p>
+            <p data-testid="labelFooter" className="text-gray-600">{layout.footer}</p>
           </footer>
         </div>
       </body>

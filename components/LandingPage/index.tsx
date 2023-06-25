@@ -1,16 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
 import TRANSLATION from '@/locale';
+import landingPageStyle from '@/app/styles';
 
 const LandingPage: React.FC = () => {
-  const { dashboard } = TRANSLATION;
+  const { landingPage } = TRANSLATION;
   return (
-    <div className="flex items-center justify-center">
-      <section className="text-center">
-        <p className="text-2xl lg:text-4xl font-bold text-blue-900 mb-4">{dashboard.dashboardTitle}</p>
-        <p className="text-md lg:text-lg text-gray-600">{dashboard.dashboardDesc}</p>
-        <button type="button" className="bg-blue-900 text-white rounded-full px-6 py-2 mt-4 hover:bg-blue-800">
-          <Link href="/talent-list" className="">{dashboard.dashboardButton}</Link>
+    <div className={landingPageStyle.landingPageContainer}>
+      <section className={landingPageStyle.textCenter}>
+        <p data-testid="landingTitle" className={landingPageStyle.landingPageTitle}>{landingPage.landingTitle}</p>
+        <p data-testid="landingDesc" className={landingPageStyle.landingPageDesc}>{landingPage.landingDesc}</p>
+        <button type="button" className={landingPageStyle.landingPageBtn}>
+          <Link data-testid="landingButton" href="/talent-list">{landingPage.landingButton}</Link>
         </button>
       </section>
     </div>

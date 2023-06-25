@@ -3,10 +3,10 @@ const TRANSLATION = {
     talentFlow: 'Talent Flow',
     footer: '© 2023 Talent Flow. All rights reserved.',
   },
-  dashboard: {
-    dashboardTitle: 'Build Your Talent Pool',
-    dashboardDesc: 'Connect with top talent and streamline your hiring process.',
-    dashboardButton: 'Get Started',
+  landingPage: {
+    landingTitle: 'Build Your Talent Pool',
+    landingDesc: 'Connect with top talent and streamline your hiring process.',
+    landingButton: 'Get Started',
   },
   candidateActionButton: {
     btnShortlist: 'Shortlist',

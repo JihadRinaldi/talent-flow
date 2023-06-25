@@ -2,6 +2,7 @@ import React from 'react';
 import { TALENT_STAGE } from '@/constants';
 import { ICandidate, IOnChangeStatus } from '@/interfaces';
 import TRANSLATION from '@/locale';
+import TALENT_LIST_STYLE from '../styles';
 
 interface IProps {
   candidate: ICandidate;
@@ -10,21 +11,24 @@ interface IProps {
 
 const CandidateActionButton = ({ candidate, onChangeStatus }: IProps) => {
   const { candidateActionButton } = TRANSLATION;
+  const { candidateButtonStyle } = TALENT_LIST_STYLE;
   const ActionBuilder = () => {
     switch (candidate.stage) {
       case TALENT_STAGE.NEW:
         return (
           <>
             <button
+              data-testid="btnReject"
               type="button"
-              className="inline-block bg-red-200 rounded-md px-3 py-1 text-sm text-gray-700"
+              className={candidateButtonStyle.btnRed}
               onClick={() => onChangeStatus({ candidate, newStatus: TALENT_STAGE.REJECT })}
             >
               {candidateActionButton.btnReject}
             </button>
             <button
+              data-testid="btnShortlist"
               type="button"
-              className="inline-block bg-green-200 rounded-md px-3 py-1 text-sm text-gray-700"
+              className={candidateButtonStyle.btnGreen}
               onClick={() => onChangeStatus({ candidate, newStatus: TALENT_STAGE.SHORTLIST })}
             >
               {candidateActionButton.btnShortlist}
@@ -35,15 +39,17 @@ const CandidateActionButton = ({ candidate, onChangeStatus }: IProps) => {
         return (
           <>
             <button
+              data-testid="btnReject"
               type="button"
-              className="inline-block bg-red-200 rounded-md px-3 py-1 text-sm text-gray-700"
+              className={candidateButtonStyle.btnRed}
               onClick={() => onChangeStatus({ candidate, newStatus: TALENT_STAGE.REJECT })}
             >
               {candidateActionButton.btnReject}
             </button>
             <button
+              data-testid="btnInterview"
               type="button"
-              className="inline-block bg-green-200 rounded-md px-3 py-1 text-sm text-gray-700"
+              className={candidateButtonStyle.btnGreen}
               onClick={() => onChangeStatus({ candidate, newStatus: TALENT_STAGE.INTERVIEW })}
             >
               {candidateActionButton.btnInterview}
@@ -54,15 +60,17 @@ const CandidateActionButton = ({ candidate, onChangeStatus }: IProps) => {
         return (
           <>
             <button
+              data-testid="btnReject"
               type="button"
-              className="inline-block bg-red-200 rounded-md px-3 py-1 text-sm text-gray-700"
+              className={candidateButtonStyle.btnRed}
               onClick={() => onChangeStatus({ candidate, newStatus: TALENT_STAGE.REJECT })}
             >
               {candidateActionButton.btnReject}
             </button>
             <button
+              data-testid="btnHired"
               type="button"
-              className="inline-block bg-green-200 rounded-md px-3 py-1 text-sm text-gray-700"
+              className={candidateButtonStyle.btnGreen}
               onClick={() => onChangeStatus({ candidate, newStatus: TALENT_STAGE.HIRED })}
             >
               {candidateActionButton.btnHire}
@@ -77,7 +85,7 @@ const CandidateActionButton = ({ candidate, onChangeStatus }: IProps) => {
     }
   };
   return (
-    <div className="flex flex-row justify-center items-center gap-2">
+    <div className={candidateButtonStyle.btnContainer}>
       <ActionBuilder />
     </div>
   );

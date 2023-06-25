@@ -29,14 +29,12 @@ export const TALENT_DATA: ICandidate[] = [
     stage: 'shortlist',
     notes: [
       {
-        staff_name: 'staff 2',
-        note: 'already doing 1st call process already doing 1st call process',
+        staff_name: 'staff 1',
+        note: 'please process',
       },
       {
-        staff_name: 'staff 1',
-        // note: "please process"
+        staff_name: 'staff 2',
         note: 'already doing 1st call process already doing 1st call process',
-
       },
     ],
   },
