@@ -43,11 +43,16 @@ Create Unit Test and Integration Test using React Testing Library/JEST under `__
 
 ```bash
 yarn dev
+yarn lint
+yarn test
+yarn test:coverage
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+
 
 ## Learn More
 
