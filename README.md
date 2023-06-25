@@ -1,20 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TALENT FLOW
 
-## Getting Started
+<p align="center">
+   <p>
+      Landing Page
+   </p>
+   <img src=".github/docs/images/landing-web.png" width="500"/>
+   <img src=".github/docs/images/landing-mobile.png" width="500"/>
+</p>
 
-First, run the development server:
+<br /> 
+
+<p align="center">
+   <p>
+      Talent List Page
+   </p>
+   <img src=".github/docs/images/talent-list-web.png" width="500"/>
+   <img src=".github/docs/images/talent-list-mobile.png" width="500"/>
+</p>
+
+<br /> 
+
+## Libraries
+These are the main library for creating the UI
+| Library                 | Description                              |
+|-------------------------|------------------------------------------|
+| next 13                 | React web application framework          |
+| react                   | For creating UI components               |
+| tailwind                | CSS framework                            |
+| react testing library   | unit test for react components           |
+
+## Deploy on Vercel
+
+This project deploy on Vercel and you can access it through this https://talent-flow.vercel.app/
+
+## Coverage Report
+
+Create Unit Test and Integration Test using React Testing Library/JEST under `__tests__` folders
+
+![Coverage Report](.github/docs/images/coverage-result.png)
+
+## Available Scripts
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
@@ -26,9 +57,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
