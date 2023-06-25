@@ -1,11 +1,12 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import TalentList from '../page';
 
 describe('Talent List Page', () => {
   it('snapshot stages', async () => {
-    render(<TalentList />)
+    render(<><TalentList /></>);
 
-    const labelStageList = await screen.findAllByTestId(/labelStage/i);  
+    const labelStageList = await screen.findAllByTestId(/labelStage/i);
     expect(labelStageList.map((labelStage) => labelStage.textContent)).toMatchInlineSnapshot(`
       [
         "NEW",
@@ -18,9 +19,9 @@ describe('Talent List Page', () => {
   });
 
   it('click to change tab', async () => {
-    render(<TalentList />)
+    render(<TalentList />);
 
-    const labelReject = await screen.findByText("REJECT");
+    const labelReject = await screen.findByText('REJECT');
     const rejectButton = await screen.findByTestId(/btnReject/i);
     const shortlistButton = await screen.findByTestId(/btnShortlist/i);
 
@@ -30,5 +31,5 @@ describe('Talent List Page', () => {
 
     expect(labelReject).toBeInTheDocument();
     fireEvent.click(labelReject);
-  })
-})
+  });
+});

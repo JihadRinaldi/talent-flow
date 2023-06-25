@@ -2,7 +2,7 @@ import { ICandidate, IOnChangeStatus } from '@/interfaces';
 import React from 'react';
 import CandiateNote from './CandidateNote';
 import CandidateActionButton from './CandidateActionButton';
-import TALENT_LIST_STYLE from '../styles';
+import { TALENT_LIST_STYLE } from '../styles';
 
 interface IProps {
   candidate: ICandidate;
@@ -22,7 +22,7 @@ const CandidateCard: React.FC<IProps> = ({ candidate, onChangeStatus }: IProps) 
         <CandidateActionButton candidate={candidate} onChangeStatus={onChangeStatus} />
       </div>
     </div>
-  )
+  );
 };
 
 export default CandidateCard;

@@ -2,7 +2,7 @@ import React from 'react';
 import { TALENT_STAGE } from '@/constants';
 import { ICandidate, IOnChangeStatus } from '@/interfaces';
 import TRANSLATION from '@/locale';
-import TALENT_LIST_STYLE from '../styles';
+import { TALENT_LIST_STYLE } from '../styles';
 
 interface IProps {
   candidate: ICandidate;

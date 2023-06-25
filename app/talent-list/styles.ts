@@ -24,8 +24,7 @@ export const TALENT_LIST_STYLE = {
     stageContainer: 'flex justify-between items-center mb-8',
     contentWrapper: 'flex flex-wrap',
     textTalentStage: 'mr-4 cursor-pointer',
-
-  }
+  },
 };
 
 export default TALENT_LIST_STYLE;

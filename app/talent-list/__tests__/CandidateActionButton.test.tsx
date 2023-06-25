@@ -1,10 +1,15 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import CandidateActionButton from '../components/CandidateActionButton';
-import { MOCK_CANDIDATE_INTERVIEW, MOCK_CANDIDATE_NEW, MOCK_CANDIDATE_REJECT, MOCK_CANDIDATE_SHORTLIST, MOCK_CANDIDATE_STAGE_NULL } from '../__mocks__/candidateData';
+import {
+  MOCK_CANDIDATE_INTERVIEW,
+  MOCK_CANDIDATE_NEW,
+  MOCK_CANDIDATE_REJECT,
+  MOCK_CANDIDATE_SHORTLIST,
+  MOCK_CANDIDATE_STAGE_NULL,
+} from '../__mocks__/candidateData';
 
 describe('CandidateActionButton', () => {
-  const candidate = { stage: 'new' };
   const onChangeStatusMock = jest.fn();
 
   afterEach(() => {
@@ -12,8 +17,13 @@ describe('CandidateActionButton', () => {
   });
 
   it('renders the buttons for the NEW stage', async () => {
-    render(<CandidateActionButton candidate={MOCK_CANDIDATE_NEW} onChangeStatus={onChangeStatusMock} />);
-    
+    render(
+      <CandidateActionButton
+        candidate={MOCK_CANDIDATE_NEW}
+        onChangeStatus={onChangeStatusMock}
+      />,
+    );
+
     const rejectButton = await screen.findByTestId(/btnReject/i);
     const shortlistButton = await screen.findByTestId(/btnShortlist/i);
 
@@ -27,8 +37,13 @@ describe('CandidateActionButton', () => {
   });
 
   it('renders the buttons for the SHORTLIST stage', async () => {
-    render(<CandidateActionButton candidate={MOCK_CANDIDATE_SHORTLIST} onChangeStatus={onChangeStatusMock} />);
-    
+    render(
+      <CandidateActionButton
+        candidate={MOCK_CANDIDATE_SHORTLIST}
+        onChangeStatus={onChangeStatusMock}
+      />,
+    );
+
     const rejectButton = await screen.findByTestId(/btnReject/i);
     const interviewButton = await screen.findByTestId(/btnInterview/i);
 
@@ -42,8 +57,13 @@ describe('CandidateActionButton', () => {
   });
 
   it('renders the buttons for the INTERVIEW stage', async () => {
-    render(<CandidateActionButton candidate={MOCK_CANDIDATE_INTERVIEW} onChangeStatus={onChangeStatusMock} />);
-    
+    render(
+      <CandidateActionButton
+        candidate={MOCK_CANDIDATE_INTERVIEW}
+        onChangeStatus={onChangeStatusMock}
+      />,
+    );
+
     const rejectButton = await screen.findByTestId(/btnReject/i);
     const hireButton = await screen.findByTestId(/btnHire/i);
 
@@ -55,8 +75,13 @@ describe('CandidateActionButton', () => {
   });
 
   it('does not render any buttons for the HIRED or REJECT stage', () => {
-    render(<CandidateActionButton candidate={MOCK_CANDIDATE_REJECT} onChangeStatus={onChangeStatusMock} />);
-    
+    render(
+      <CandidateActionButton
+        candidate={MOCK_CANDIDATE_REJECT}
+        onChangeStatus={onChangeStatusMock}
+      />,
+    );
+
     const hireButton = screen.queryAllByTestId(/btnHired/i);
     const rejectButton = screen.queryAllByTestId(/btnReject/i);
     const interviewButton = screen.queryAllByTestId(/btnInterview/i);
@@ -69,8 +94,13 @@ describe('CandidateActionButton', () => {
   });
 
   it('does not render any buttons for NULL stage', () => {
-    render(<CandidateActionButton candidate={MOCK_CANDIDATE_STAGE_NULL} onChangeStatus={onChangeStatusMock} />);
-    
+    render(
+      <CandidateActionButton
+        candidate={MOCK_CANDIDATE_STAGE_NULL}
+        onChangeStatus={onChangeStatusMock}
+      />,
+    );
+
     const hireButton = screen.queryAllByTestId(/btnHired/i);
     const rejectButton = screen.queryAllByTestId(/btnReject/i);
     const interviewButton = screen.queryAllByTestId(/btnInterview/i);

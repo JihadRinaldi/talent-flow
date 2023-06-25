@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { IOnChangeStatus } from '@/interfaces';
 import TRANSLATION from '@/locale';
 import CandidateCard from './components/CandidateCard';
-import TALENT_LIST_STYLE from './styles';
+import { TALENT_LIST_STYLE } from './styles';
 
 const TalentList: React.FC = () => {
   const { message } = TRANSLATION;
